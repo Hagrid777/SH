@@ -12,7 +12,7 @@
   <div class="main">
     <div class="big">
       <div>
-        <button (click)="change()">Play/Puase</button>
+        <button (click)="change()" [ngClass]= "{ng: tmr }">Play/Puase</button>
       </div>
       <div>
         <button (click)="change1()">Play/Puase</button>
@@ -21,13 +21,10 @@
         <button (click)="change2()">Play/Puase</button>
       </div>
       <div>
-        <button (click)="change9()">Play/Puase</button>
+        <button (click)="change3()">Play/Puase</button>
       </div>
     </div>
     <div class="big">
-      <div>
-        <button (click)="change3()">Play/Puase</button>
-      </div>
       <div>
         <button (click)="change4()">Play/Puase</button>
       </div>
@@ -35,18 +32,21 @@
         <button (click)="change5()">Play/Puase</button>
       </div>
       <div>
-        <button (click)="change10()">Play/Puase</button>
-      </div>
-    </div>
-    <div class="big">
-      <div>
         <button (click)="change6()">Play/Puase</button>
       </div>
       <div>
         <button (click)="change7()">Play/Puase</button>
       </div>
+    </div>
+    <div class="big">
       <div>
         <button (click)="change8()">Play/Puase</button>
+      </div>
+      <div>
+        <button (click)="change9()">Play/Puase</button>
+      </div>
+      <div>
+        <button (click)="change10()">Play/Puase</button>
       </div>
       <div>
         <button (click)="change11()">Play/Puase</button>
@@ -67,7 +67,7 @@
       </div>
     </div>
     <div class="deletor">
-      <button (click)="deleteAll()">Pause All</button>
+      <button class="button" (click)="deleteAll()"><p>Pause all</p></button>
     </div>
   </div>
 </ion-content>
