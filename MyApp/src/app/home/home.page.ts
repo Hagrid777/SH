@@ -6,7 +6,8 @@ declare var Tone: any;
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-
+ritmic = false;
+ritmcount:number = 0;
   sounds = {
     sound1:new Tone.Player("beats/beat1.mp3").toMaster(),
     sound2:new Tone.Player("beats/beat2.mp3").toMaster(),
@@ -44,126 +45,269 @@ export class HomePage {
   tmy = false;
   change() {
     this.tmr=!this.tmr;
-    if(this.tmr){Tone.context.resume().then(() => {this.sounds.sound1.start()});
-    this.tmm = false;
-    this.tma = false;
-    this.tmb = false;
-  }
+    this.ritmic = true;
+    if(this.tmr){
+      var interv = setInterval(()=>{
+        if(this.ritmcount == 2){
+          Tone.context.resume().then(() => {this.sounds.sound1.start()});
+          this.tmm = false;
+          this.tma = false;
+          this.tmb = false;
+          clearInterval(interv);
+      }
+      })
+    }
+    
   }
   change1() {
     this.tmm = !this.tmm;
-    if(this.tmm){Tone.context.resume().then(() => {this.sounds.sound2.start()});
-    this.tmr = false;
-    this.tma = false;
-    this.tmb = false;
-  }
+    this.ritmic = true;
+    if(this.tmm){
+      var interv = setInterval(()=>{
+        if(this.ritmcount == 2){
+          Tone.context.resume().then(() => {this.sounds.sound2.start()});
+          this.tmr = false;
+          this.tma = false;
+          this.tmb = false;
+          clearInterval(interv);
+      }
+      })
+    }
+
+   
+
   }
   change2() {
     this.tma = !this.tma;
-    if(this.tma){Tone.context.resume().then(() => {this.sounds.sound3.start()});
-    this.tmr = false;
-    this.tmm = false;
-    this.tmb = false;
-  }
+    this.ritmic = true;
+    if(this.tma){
+      var interv = setInterval(()=>{
+        if(this.ritmcount == 2){
+          Tone.context.resume().then(() => {this.sounds.sound3.start()});
+          this.tmr = false;
+          this.tmm = false;
+          this.tmb = false;
+          clearInterval(interv);
+      }
+      })
+    }
+
+  
   }
   change3() {
+    this.ritmic = true;
     this.tmb = !this.tmb;
-    if(this.tmb){Tone.context.resume().then(() => {this.sounds.sound4.start()});
-    this.tmr = false;
-    this.tma = false;
-    this.tmm = false;
-  }
+
+
+    if(this.tmb){
+      var interv = setInterval(()=>{
+        if(this.ritmcount == 2){
+          Tone.context.resume().then(() => {this.sounds.sound4.start()});
+          this.tmr = false;
+          this.tma = false;
+          this.tmm = false;
+          clearInterval(interv);
+      }
+      })
+    }
   }
   change4() {
+    this.ritmic = true;
     this.tmc = !this.tmc
-    if(this.tmc){Tone.context.resume().then(() => {this.sounds.sound5.start()})
-    this.tme = false;
-    this.tmd = false;
-    this.tmf = false;
+
+    if(this.tmc){
+      var interv = setInterval(()=>{
+        if(this.ritmcount == 2){
+          Tone.context.resume().then(() => {this.sounds.sound5.start()});
+          this.tme = false;
+          this.tmd = false;
+          this.tmf = false;
+          clearInterval(interv);
+      }
+      })
+    }
+
   }
-  }
+
   change5() {
+    this.ritmic = true;
     this.tmd = !this.tmd
-    if(this.tmd){Tone.context.resume().then(() => {this.sounds.sound6.start()})
-    this.tme = false;
-    this.tmc = false;
-    this.tmf = false;
-  }
+
+    if(this.tmd){
+      var interv = setInterval(()=>{
+        if(this.ritmcount == 2){
+          Tone.context.resume().then(() => {this.sounds.sound6.start()});
+          this.tme = false;
+          this.tmc = false;
+          this.tmf = false;
+          clearInterval(interv);
+      }
+      })
+    }
+
   }
   change6() {
+    this.ritmic = true;
     this.tme = !this.tme
-    if(this.tme){Tone.context.resume().then(() => {this.sounds.sound7.start()})
-    this.tmc = false;
-    this.tmd = false;
-    this.tmf = false;
-  }
+    if(this.tme){
+      var interv = setInterval(()=>{
+        if(this.ritmcount == 2){
+          Tone.context.resume().then(() => {this.sounds.sound7.start()});
+          this.tmc = false;
+          this.tmd = false;
+          this.tmf = false;
+          clearInterval(interv);
+      }
+      })
+    }
+
   }
   change7() {
+    this.ritmic = true;
     this.tmf = !this.tmf
-    if(this.tmf){Tone.context.resume().then(() => {this.sounds.sound8.start()})
-    this.tme = false;
-    this.tmd = false;
-    this.tmc = false;
+    if(this.tmf){
+      var interv = setInterval(()=>{
+        if(this.ritmcount == 2){
+          Tone.context.resume().then(() => {this.sounds.sound8.start()});
+          this.tmc = false;
+          this.tmd = false;
+          this.tme = false;
+          clearInterval(interv);
+      }
+      })
+    }
   }
-  }
+  
   change8() {
+    this.ritmic = true;
     this.tmg = !this.tmg
-    if(this.tmg){Tone.context.resume().then(() => {this.sounds.sound9.start()})
-    this.tmh = false;
-    this.tmi = false;
-    this.tmj = false;
+    if(this.tmg){
+      var interv = setInterval(()=>{
+        if(this.ritmcount == 2){
+          Tone.context.resume().then(() => {this.sounds.sound9.start()});
+          this.tmh = false;
+          this.tmi = false;
+          this.tmj = false;
+          clearInterval(interv);
+      }
+      })
+    }
   }
-  }
+  
   change9() {
+    this.ritmic = true;
     this.tmh = !this.tmh
-    if(this.tmh)Tone.context.resume().then(() => {this.sounds.sound10.start()})
-    this.tmg = false;
-    this.tmi = false;
-    this.tmj = false;
+    if(this.tmh){
+      var interv = setInterval(()=>{
+        if(this.ritmcount == 2){
+          Tone.context.resume().then(() => {this.sounds.sound10.start()});
+          this.tmg = false;
+          this.tmi = false;
+          this.tmj = false;
+          clearInterval(interv);
+      }
+      })
+    }
+
   }
   change10() {
+    this.ritmic = true;
     this.tmi = !this.tmi
-    if(this.tmi)Tone.context.resume().then(() => {this.sounds.sound11.start()})
-    this.tmh = false;
-    this.tmg = false;
-    this.tmj = false;
+    if(this.tmi){
+      var interv = setInterval(()=>{
+        if(this.ritmcount == 2){
+          Tone.context.resume().then(() => {this.sounds.sound11.start()});
+          this.tmh = false;
+          this.tmg = false;
+          this.tmj = false;
+          clearInterval(interv);
+      }
+      })
+    }
+
   }
   change11() {
+    this.ritmic = true;
     this.tmj = !this.tmj
-    if(this.tmj)Tone.context.resume().then(() => {this.sounds.sound12.start()})
-    this.tmh = false;
-    this.tmi = false;
-    this.tmg = false;
+    if(this.tmj){
+      var interv = setInterval(()=>{
+        if(this.ritmcount == 2){
+          Tone.context.resume().then(() => {this.sounds.sound12.start()});
+          this.tmh = false;
+          this.tmi = false;
+          this.tmg = false;
+          clearInterval(interv);
+      }
+      })
+    }
+
   }
   change12() {
+    this.ritmic = true;
     this.tmk = !this.tmk
-    if(this.tmk)Tone.context.resume().then(() => {this.sounds.sound13.start()})
-    this.tmo = false;
-    this.tmy = false;
-    this.tml = false;
+    if(this.tmk){
+      var interv = setInterval(()=>{
+        if(this.ritmcount == 2){
+          Tone.context.resume().then(() => {this.sounds.sound13.start()});
+          this.tmo = false;
+          this.tmy = false;
+          this.tml = false;
+          clearInterval(interv);
+      }
+      })
+    }
+
   }
   change13() {
+    this.ritmic = true;
     this.tml = !this.tml
-    if(this.tml)Tone.context.resume().then(() => {this.sounds.sound14.start()})
-    this.tmo = false;
-    this.tmy = false;
-    this.tmk = false;
+    if(this.tml){
+      var interv = setInterval(()=>{
+        if(this.ritmcount == 2){
+          Tone.context.resume().then(() => {this.sounds.sound14.start()});
+          this.tmo = false;
+          this.tmy = false;
+          this.tmk = false;
+          clearInterval(interv);
+      }
+      })
+    }
+
   }
   change14() {
+    this.ritmic = true;
     this.tmo = !this.tmo
-    if(this.tmo)Tone.context.resume().then(() => {this.sounds.sound15.start()})
-    this.tmk = false;
-    this.tmy = false;
-    this.tml = false;
+    if(this.tmo){
+      var interv = setInterval(()=>{
+        if(this.ritmcount == 2){
+          Tone.context.resume().then(() => {this.sounds.sound15.start()});
+          this.tmk = false;
+          this.tmy = false;
+          this.tml = false;
+          clearInterval(interv);
+      }
+      })
+    }
+
   }
   change15() {
+    this.ritmic = true;
     this.tmy = !this.tmy
-    if(this.tmy)Tone.context.resume().then(() => {this.sounds.sound16.start()})
-    this.tmo = false;
-    this.tmk = false;
-    this.tml = false;
+    if(this.tmy){
+      var interv = setInterval(()=>{
+        if(this.ritmcount == 2){
+          Tone.context.resume().then(() => {this.sounds.sound16.start()});
+          this.tmo = false;
+          this.tmk = false;
+          this.tml = false;
+          clearInterval(interv);
+      }
+      })
+    }
+
   }
   deleteAll() {
+    this.ritmic = false;
     this.tmr = false;
     this.tmm = false
     this.tma = false
@@ -285,8 +429,23 @@ export class HomePage {
     //   var synth = new Tone.Player().toMaster()
     //   if(this.tmg)synth.triggerAttackRelease('B5', '5n');
     // }, 500);
-
+    setInterval(()=>{
+      if(this.ritmic){
+        if(this.ritmcount == 4){
+          this.ritmcount = 0;
+        }
+        else{
+        this.ritmcount++;
+        console.log(this.ritmcount)
+      }
+      }
+      else{
+        this.ritmcount = 0;
+      }
+    },1000);
   }
+  
+  
 
 }
 
