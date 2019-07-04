@@ -7,7 +7,7 @@ declare var Tone: any;
 })
 export class HomePage {
 ritmic = false;
-ritmcount:number = 4;
+ritmcount:number = 3;
   sounds = {
     sound1:new Tone.Player("beats/beat1.mp3").toMaster(),
     sound2:new Tone.Player("beats/beat2.mp3").toMaster(),
@@ -48,7 +48,7 @@ ritmcount:number = 4;
     this.ritmic = true;
     if(this.tmr){
       var interv = setInterval(()=>{
-        if(this.ritmcount == 4){
+        if(this.ritmcount == 3){
           Tone.context.resume().then(() => {this.sounds.sound1.start()});
           this.tmm = false;
           this.tma = false;
@@ -65,7 +65,7 @@ ritmcount:number = 4;
     this.ritmic = true;
     if(this.tmm){
       var interv = setInterval(()=>{
-        if(this.ritmcount == 4){
+        if(this.ritmcount == 3){
           Tone.context.resume().then(() => {this.sounds.sound2.start()});
           this.tmr = false;
           this.tma = false;
@@ -84,7 +84,7 @@ ritmcount:number = 4;
     this.ritmic = true;
     if(this.tma){
       var interv = setInterval(()=>{
-        if(this.ritmcount == 4){
+        if(this.ritmcount == 3){
           Tone.context.resume().then(() => {this.sounds.sound3.start()});
           this.tmr = false;
           this.tmm = false;
@@ -104,7 +104,7 @@ ritmcount:number = 4;
 
     if(this.tmb){
       var interv = setInterval(()=>{
-        if(this.ritmcount == 4){
+        if(this.ritmcount == 3){
           Tone.context.resume().then(() => {this.sounds.sound4.start()});
           this.tmr = false;
           this.tma = false;
@@ -121,7 +121,7 @@ ritmcount:number = 4;
 
     if(this.tmc){
       var interv = setInterval(()=>{
-        if(this.ritmcount == 4){
+        if(this.ritmcount == 3){
           Tone.context.resume().then(() => {this.sounds.sound5.start()});
           this.tme = false;
           this.tmd = false;
@@ -140,7 +140,7 @@ ritmcount:number = 4;
 
     if(this.tmd){
       var interv = setInterval(()=>{
-        if(this.ritmcount == 4){
+        if(this.ritmcount == 3){
           Tone.context.resume().then(() => {this.sounds.sound6.start()});
           this.tme = false;
           this.tmc = false;
@@ -157,7 +157,7 @@ ritmcount:number = 4;
     this.tme = !this.tme
     if(this.tme){
       var interv = setInterval(()=>{
-        if(this.ritmcount == 4){
+        if(this.ritmcount == 3){
           Tone.context.resume().then(() => {this.sounds.sound7.start()});
           this.tmc = false;
           this.tmd = false;
@@ -174,7 +174,7 @@ ritmcount:number = 4;
     this.tmf = !this.tmf
     if(this.tmf){
       var interv = setInterval(()=>{
-        if(this.ritmcount == 4){
+        if(this.ritmcount == 3){
           Tone.context.resume().then(() => {this.sounds.sound8.start()});
           this.tmc = false;
           this.tmd = false;
@@ -191,7 +191,7 @@ ritmcount:number = 4;
     this.tmg = !this.tmg
     if(this.tmg){
       var interv = setInterval(()=>{
-        if(this.ritmcount == 4){
+        if(this.ritmcount == 3){
           Tone.context.resume().then(() => {this.sounds.sound9.start()});
           this.tmh = false;
           this.tmi = false;
@@ -208,7 +208,7 @@ ritmcount:number = 4;
     this.tmh = !this.tmh
     if(this.tmh){
       var interv = setInterval(()=>{
-        if(this.ritmcount == 4){
+        if(this.ritmcount == 3){
           Tone.context.resume().then(() => {this.sounds.sound10.start()});
           this.tmg = false;
           this.tmi = false;
@@ -225,7 +225,7 @@ ritmcount:number = 4;
     this.tmi = !this.tmi
     if(this.tmi){
       var interv = setInterval(()=>{
-        if(this.ritmcount == 4){
+        if(this.ritmcount == 3){
           Tone.context.resume().then(() => {this.sounds.sound11.start()});
           this.tmh = false;
           this.tmg = false;
@@ -242,7 +242,7 @@ ritmcount:number = 4;
     this.tmj = !this.tmj
     if(this.tmj){
       var interv = setInterval(()=>{
-        if(this.ritmcount == 4){
+        if(this.ritmcount == 3){
           Tone.context.resume().then(() => {this.sounds.sound12.start()});
           this.tmh = false;
           this.tmi = false;
@@ -259,7 +259,7 @@ ritmcount:number = 4;
     this.tmk = !this.tmk
     if(this.tmk){
       var interv = setInterval(()=>{
-        if(this.ritmcount == 4){
+        if(this.ritmcount == 3){
           Tone.context.resume().then(() => {this.sounds.sound13.start()});
           this.tmo = false;
           this.tmy = false;
@@ -276,7 +276,7 @@ ritmcount:number = 4;
     this.tml = !this.tml
     if(this.tml){
       var interv = setInterval(()=>{
-        if(this.ritmcount == 4){
+        if(this.ritmcount == 3){
           Tone.context.resume().then(() => {this.sounds.sound14.start()});
           this.tmo = false;
           this.tmy = false;
@@ -293,7 +293,7 @@ ritmcount:number = 4;
     this.tmo = !this.tmo
     if(this.tmo){
       var interv = setInterval(()=>{
-        if(this.ritmcount == 4){
+        if(this.ritmcount == 3){
           Tone.context.resume().then(() => {this.sounds.sound15.start()});
           this.tmk = false;
           this.tmy = false;
@@ -310,7 +310,7 @@ ritmcount:number = 4;
     this.tmy = !this.tmy
     if(this.tmy){
       var interv = setInterval(()=>{
-        if(this.ritmcount == 4){
+        if(this.ritmcount == 3){
           Tone.context.resume().then(() => {this.sounds.sound16.start()});
           this.tmo = false;
           this.tmk = false;
@@ -447,7 +447,7 @@ ritmcount:number = 4;
     // }, 500);
     setInterval(()=>{
       if(this.ritmic){
-        if(this.ritmcount == 4){
+        if(this.ritmcount == 3){
           this.ritmcount = 0;
         }
         else{
