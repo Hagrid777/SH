@@ -7,7 +7,7 @@ declare var Tone: any;
 })
 export class HomePage {
 ritmic = false;
-ritmcount:number = 0;
+ritmcount:number = 4;
   sounds = {
     sound1:new Tone.Player("beats/beat1.mp3").toMaster(),
     sound2:new Tone.Player("beats/beat2.mp3").toMaster(),
@@ -48,12 +48,13 @@ ritmcount:number = 0;
     this.ritmic = true;
     if(this.tmr){
       var interv = setInterval(()=>{
-        if(this.ritmcount == 2){
+        if(this.ritmcount == 4){
           Tone.context.resume().then(() => {this.sounds.sound1.start()});
           this.tmm = false;
           this.tma = false;
           this.tmb = false;
           clearInterval(interv);
+          this.ritmcount = 0;
       }
       })
     }
@@ -64,12 +65,13 @@ ritmcount:number = 0;
     this.ritmic = true;
     if(this.tmm){
       var interv = setInterval(()=>{
-        if(this.ritmcount == 2){
+        if(this.ritmcount == 4){
           Tone.context.resume().then(() => {this.sounds.sound2.start()});
           this.tmr = false;
           this.tma = false;
           this.tmb = false;
           clearInterval(interv);
+          this.ritmcount = 0;
       }
       })
     }
@@ -82,12 +84,13 @@ ritmcount:number = 0;
     this.ritmic = true;
     if(this.tma){
       var interv = setInterval(()=>{
-        if(this.ritmcount == 2){
+        if(this.ritmcount == 4){
           Tone.context.resume().then(() => {this.sounds.sound3.start()});
           this.tmr = false;
           this.tmm = false;
           this.tmb = false;
           clearInterval(interv);
+          this.ritmcount = 0;
       }
       })
     }
@@ -101,12 +104,13 @@ ritmcount:number = 0;
 
     if(this.tmb){
       var interv = setInterval(()=>{
-        if(this.ritmcount == 2){
+        if(this.ritmcount == 4){
           Tone.context.resume().then(() => {this.sounds.sound4.start()});
           this.tmr = false;
           this.tma = false;
           this.tmm = false;
           clearInterval(interv);
+          this.ritmcount = 0;
       }
       })
     }
@@ -117,12 +121,13 @@ ritmcount:number = 0;
 
     if(this.tmc){
       var interv = setInterval(()=>{
-        if(this.ritmcount == 2){
+        if(this.ritmcount == 4){
           Tone.context.resume().then(() => {this.sounds.sound5.start()});
           this.tme = false;
           this.tmd = false;
           this.tmf = false;
           clearInterval(interv);
+          this.ritmcount = 0;
       }
       })
     }
@@ -135,12 +140,13 @@ ritmcount:number = 0;
 
     if(this.tmd){
       var interv = setInterval(()=>{
-        if(this.ritmcount == 2){
+        if(this.ritmcount == 4){
           Tone.context.resume().then(() => {this.sounds.sound6.start()});
           this.tme = false;
           this.tmc = false;
           this.tmf = false;
           clearInterval(interv);
+          this.ritmcount = 0;
       }
       })
     }
@@ -151,12 +157,13 @@ ritmcount:number = 0;
     this.tme = !this.tme
     if(this.tme){
       var interv = setInterval(()=>{
-        if(this.ritmcount == 2){
+        if(this.ritmcount == 4){
           Tone.context.resume().then(() => {this.sounds.sound7.start()});
           this.tmc = false;
           this.tmd = false;
           this.tmf = false;
           clearInterval(interv);
+          this.ritmcount = 0;
       }
       })
     }
@@ -167,12 +174,13 @@ ritmcount:number = 0;
     this.tmf = !this.tmf
     if(this.tmf){
       var interv = setInterval(()=>{
-        if(this.ritmcount == 2){
+        if(this.ritmcount == 4){
           Tone.context.resume().then(() => {this.sounds.sound8.start()});
           this.tmc = false;
           this.tmd = false;
           this.tme = false;
           clearInterval(interv);
+          this.ritmcount = 0;
       }
       })
     }
@@ -183,12 +191,13 @@ ritmcount:number = 0;
     this.tmg = !this.tmg
     if(this.tmg){
       var interv = setInterval(()=>{
-        if(this.ritmcount == 2){
+        if(this.ritmcount == 4){
           Tone.context.resume().then(() => {this.sounds.sound9.start()});
           this.tmh = false;
           this.tmi = false;
           this.tmj = false;
           clearInterval(interv);
+          this.ritmcount = 0;
       }
       })
     }
@@ -199,12 +208,13 @@ ritmcount:number = 0;
     this.tmh = !this.tmh
     if(this.tmh){
       var interv = setInterval(()=>{
-        if(this.ritmcount == 2){
+        if(this.ritmcount == 4){
           Tone.context.resume().then(() => {this.sounds.sound10.start()});
           this.tmg = false;
           this.tmi = false;
           this.tmj = false;
           clearInterval(interv);
+          this.ritmcount = 0;
       }
       })
     }
@@ -215,12 +225,13 @@ ritmcount:number = 0;
     this.tmi = !this.tmi
     if(this.tmi){
       var interv = setInterval(()=>{
-        if(this.ritmcount == 2){
+        if(this.ritmcount == 4){
           Tone.context.resume().then(() => {this.sounds.sound11.start()});
           this.tmh = false;
           this.tmg = false;
           this.tmj = false;
           clearInterval(interv);
+          this.ritmcount = 0;
       }
       })
     }
@@ -231,12 +242,13 @@ ritmcount:number = 0;
     this.tmj = !this.tmj
     if(this.tmj){
       var interv = setInterval(()=>{
-        if(this.ritmcount == 2){
+        if(this.ritmcount == 4){
           Tone.context.resume().then(() => {this.sounds.sound12.start()});
           this.tmh = false;
           this.tmi = false;
           this.tmg = false;
           clearInterval(interv);
+          this.ritmcount = 0;
       }
       })
     }
@@ -247,12 +259,13 @@ ritmcount:number = 0;
     this.tmk = !this.tmk
     if(this.tmk){
       var interv = setInterval(()=>{
-        if(this.ritmcount == 2){
+        if(this.ritmcount == 4){
           Tone.context.resume().then(() => {this.sounds.sound13.start()});
           this.tmo = false;
           this.tmy = false;
           this.tml = false;
           clearInterval(interv);
+          this.ritmcount = 0;
       }
       })
     }
@@ -263,12 +276,13 @@ ritmcount:number = 0;
     this.tml = !this.tml
     if(this.tml){
       var interv = setInterval(()=>{
-        if(this.ritmcount == 2){
+        if(this.ritmcount == 4){
           Tone.context.resume().then(() => {this.sounds.sound14.start()});
           this.tmo = false;
           this.tmy = false;
           this.tmk = false;
           clearInterval(interv);
+          this.ritmcount = 0;
       }
       })
     }
@@ -279,12 +293,13 @@ ritmcount:number = 0;
     this.tmo = !this.tmo
     if(this.tmo){
       var interv = setInterval(()=>{
-        if(this.ritmcount == 2){
+        if(this.ritmcount == 4){
           Tone.context.resume().then(() => {this.sounds.sound15.start()});
           this.tmk = false;
           this.tmy = false;
           this.tml = false;
           clearInterval(interv);
+          this.ritmcount = 0;
       }
       })
     }
@@ -295,12 +310,13 @@ ritmcount:number = 0;
     this.tmy = !this.tmy
     if(this.tmy){
       var interv = setInterval(()=>{
-        if(this.ritmcount == 2){
+        if(this.ritmcount == 4){
           Tone.context.resume().then(() => {this.sounds.sound16.start()});
           this.tmo = false;
           this.tmk = false;
           this.tml = false;
           clearInterval(interv);
+          this.ritmcount = 0;
       }
       })
     }
@@ -326,11 +342,11 @@ ritmcount:number = 0;
     this.tmy = false
   }
 
+
   ngOnInit() {
     setInterval(() => {
       if(this.tmr)Tone.context.resume().then(() => {this.sounds.sound1.start()});
     }, 16000);
-
     setInterval(() => {
       if(!this.tmr)Tone.context.resume().then(()=>{this.sounds.sound1.stop()})
     }, 500);
